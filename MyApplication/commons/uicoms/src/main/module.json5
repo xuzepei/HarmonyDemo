@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "uicoms",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}
