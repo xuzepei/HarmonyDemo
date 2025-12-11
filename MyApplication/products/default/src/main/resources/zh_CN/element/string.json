@@ -2,19 +2,19 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "模块描述"
     },
     {
       "name": "EntryAbility_desc",
-      "value": "description"
+      "value": "描述"
     },
     {
       "name": "EntryAbility_label",
-      "value": "DefaultAppName"
+      "value": "默认应用名称"
     },
     {
       "name": "apply_for_network",
-      "value": "Allow the app to access the network"
+      "value": "允许应用访问网络"
     }
   ]
 }

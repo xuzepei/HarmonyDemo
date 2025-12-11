@@ -1,3 +1,4 @@
+import { CourseLearning } from 'learning'
 import { QuickStartPage } from 'quickstart'
 
 @Entry
@@ -7,7 +8,9 @@ struct Index {
   build() {
     Column() {
       //为了使用QuickStartPage，需要修改oh-package.json5中的dependencies
-      QuickStartPage()
+      //QuickStartPage()
+
+      CourseLearning()
     }
     .backgroundColor('#F1F3F5')
     .padding({top: 36, bottom: 28})

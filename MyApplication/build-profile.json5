@@ -53,6 +53,10 @@
     {
       "name": "uicoms",
       "srcPath": "./commons/uicoms",
+    },
+    {
+      "name": "learning",
+      "srcPath": "./features/learning",
     }
   ]
 }

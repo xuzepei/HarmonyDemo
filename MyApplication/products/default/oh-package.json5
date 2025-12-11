@@ -6,6 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "quickstart": "file:../../features/quickstart"
+    "quickstart": "file:../../features/quickstart",
+    "learning": "file:../../features/learning"
   }
 }
