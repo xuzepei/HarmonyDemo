@@ -1,3 +1,8 @@
+import { BannerView } from '../view/BannerView';
+import { EnablementView } from '../view/EnablementView';
+import { TutorialView } from '../view/TutorialView';
+
+
 @Entry
 @Component
 struct Index {
@@ -24,7 +29,17 @@ struct Index {
         // .onClick(() => {
         //   this.message = 'Welcome';
         // })
-      Banner()
+      Scroll() {
+        Column() {
+          BannerView()
+          EnablementView()
+          TutorialView()
+        }
+      }
+      .scrollBar(BarState.Off)
+      .align(Alignment.TopStart)
+      .layoutWeight(1)
+
     }
     .height('100%')
     .width('100%')
@@ -32,15 +47,8 @@ struct Index {
   }
 }
 
-@Preview
-@Component
-struct Banner {
-  build() {
-    Image($r('app.media.banner_pic1'))
-      .objectFit(ImageFit.Contain)
-      .width('100%') //这里设置宽度为100%后，图片会置顶显示
-      .padding({left: 16, top: 11, right: 16, bottom: 11})
-      .borderRadius(16)
-      //.background("#FF0000")
-  }
-}
+
+
+
+
+

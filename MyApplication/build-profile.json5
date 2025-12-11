@@ -37,6 +37,10 @@
           ]
         }
       ]
+    },
+    {
+      "name": "quickstart",
+      "srcPath": "./features/quickstart"
     }
   ]
 }
