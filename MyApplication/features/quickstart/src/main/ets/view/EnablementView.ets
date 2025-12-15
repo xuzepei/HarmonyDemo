@@ -44,6 +44,9 @@ export struct EnablementItem {
 
 @Component
 export struct EnablementView {
+
+  @Consume pathStack: NavPathStack;
+
   @State list: Array<ArticleClass> = [];
 
   getDataFromJson() {
@@ -81,6 +84,9 @@ export struct EnablementView {
         ForEach(this.list, (item: ArticleClass) => {
           GridItem() {
             EnablementItem({item: item})
+              .onClick(() => {
+                this.pathStack.pushPathByName('articleDetailPage', item)
+              })
           }
         }, (item: ArticleClass) => item.id)
       }

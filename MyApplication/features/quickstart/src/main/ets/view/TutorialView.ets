@@ -54,6 +54,9 @@ export struct TutorialItem {
 
 @Component
 export struct TutorialView {
+
+  @Consume pathStack: NavPathStack;
+
   @State list: Array<ArticleClass> = [];
 
   getDataFromJson() {
@@ -91,6 +94,9 @@ export struct TutorialView {
         ForEach(this.list, (item: ArticleClass) => {
           ListItem() {
             TutorialItem({ item: item })
+              .onClick(() => {
+                this.pathStack.pushPathByName('articleDetailPage', item)
+              })
           }
         }, (item: ArticleClass) => item.id)
       }

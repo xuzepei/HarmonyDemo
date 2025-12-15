@@ -5,6 +5,7 @@ import { bufferToString } from '../util/Tool';
 @Component
 export struct BannerView {
   @State list:Array<BannerClass> = [];
+  @Consume pathStack: NavPathStack;
 
   getDataFromJson() {
     this.getUIContext().getHostContext()?.resourceManager.getRawFileContent('BannerData.json').then(value => {
@@ -33,6 +34,9 @@ export struct BannerView {
           .padding({left: 16, top: 11, right: 16, bottom: 11})
           .borderRadius(16)
         //.background("#FF0000")
+          .onClick(()=>{
+            this.pathStack.pushPathByName('bannerDetailPage', item);
+          })
       }, (item: BannerClass, index: number) => {
         return item.id
       } )
